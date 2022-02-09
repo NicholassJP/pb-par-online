@@ -1,3 +1,24 @@
+.btn-rounded1 {
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #fefaf2;
+  width: 230px;
+}
+
+.btn-rounded2 {
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #fefaf2;
+  width: 300px;
+}
+
+.btn-rounded3 {
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #e1f0fd;
+  width: 600px;
+}
+
 .btn-rounded {
   border: 1px solid #000000;
   box-sizing: border-box;

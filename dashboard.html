@@ -25,8 +25,8 @@
       <!-- summernote -->
       <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
       <!-- CSS -->
-      <link rel="stylesheet" href="css/sidebar.css">
       <link rel="stylesheet" href="css/footer.css">
+      <link rel="stylesheet" href="css/dashboard.css">
    </head>
    <body class="hold-transition sidebar-mini layout-fixed">
       <div class="wrapper">
@@ -81,12 +81,20 @@
                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                   <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
-                  <li class="nav-item menu-open">
+                  <li class="nav-item">
                      <a href="dashboard.html" class="nav-link active">
                         <img src="image/icn/Icon_Home.png" class="mr-2">
                         <p>
                            Home
-                           <i class="right fas fa-angle-left"></i>
+                           <i class="right fas fa-angle-right"></i>
+                        </p>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="buat_pengajuan.html" class="nav-link">
+                        <img src="image/icn/icon_list.png" class="mr-2">
+                        <p>
+                           Buat Pengajuan
                         </p>
                      </a>
                   </li>
@@ -132,15 +140,15 @@
                <!-- small box -->
                <div class="small-box bg-danger">
                   <div class="inner">
-                    <div class="row">
-                      <div class="col-md-4">
-                     <img src="image/ills/Logotype-apps-1.png">
+                     <div class="row">
+                        <div class="col-md-4">
+                           <img src="image/ills/Logotype-apps-1.png">
+                        </div>
+                        <div class="col">
+                           <h4 class="large mt-1"><span><i class="fas fa-arrow-circle-right"></i></span> PB - program fasisilitas pembelian barang berupa aktiva (Fix Asset)</h4>
+                           <h4 class="large mt-1"><span><i class="fas fa-arrow-circle-right"></i></span> PAR - program approval request untuk pembelian barang berupa aktiva (Fix Asset)</h4>
+                        </div>
                      </div>
-                     <div class="col">
-                      <h4 class="large mt-1"><span><i class="fas fa-arrow-circle-right"></i></span> PB - program fasisilitas pembelian barang berupa aktiva (Fix Asset)</h4>
-                      <h4 class="large mt-1"><span><i class="fas fa-arrow-circle-right"></i></span> PAR - program approval request untuk pembelian barang berupa aktiva (Fix Asset)</h4>
-                  </div>
-                  </div>
                   </div>
                </div>
             </div>
@@ -218,69 +226,69 @@
                               <div class="row">
                                  <div class="col-sm ml-2">
                                     <div class="pb-5 text-center">
-                                       <img src="image/ills/Illustrasi3d_1.png" class="mb-2" width="150">
+                                       <img src="image/ills/Illustrasi3d_1.png" class="mb-2" width="120">
                                        <h5><b>1. PB dibuat oleh Maker</b></h5>
-                                       <p class="text-left text-p">2. Hak membuat PB atas nama pemohon</p>
-                                       <p class="text-left text-p">3. Hak membuat PB atas nama sendiri(Maker)</p>
-                                       <p class="text-left text-p">2. Hak membuat PB atas nama Gabungan 1+2</p>
+                                       <p class="text-p">2. Hak membuat PB atas nama pemohon</p>
+                                       <p class="text-p">3. Hak membuat PB atas nama sendiri(Maker)</p>
+                                       <p class="text-p">2. Hak membuat PB atas nama Gabungan 1+2</p>
                                     </div>
                                  </div>
                                  <div class="col-sm ml-2">
                                     <div class="pb-5 text-center">
-                                       <img src="image/ills/Illustrasi3d_2.png" class="mb-2" width="150">
+                                       <img src="image/ills/Illustrasi3d_2.png" class="mb-2" width="120">
                                        <h5><b>2. Approval Checker</b></h5>
-                                       <p class="text-left text-p">2. Checker GS</p>
-                                       <p class="text-left text-p">3. Checker Pruchasing</p>
+                                       <p class="text-p">2. Checker GS</p>
+                                       <p class="text-p">3. Checker Pruchasing</p>
                                     </div>
                                  </div>
                                  <div class="col-sm ml-2">
                                     <div class="pb-5 text-center">
-                                       <img src="image/ills/Illustrasi3d_3.png" class="mb-2" width="150">
+                                       <img src="image/ills/Illustrasi3d_3.png" class="mb-2" width="120">
                                        <h5><b>3. Approval Requester</b></h5>
                                        <p class="text-p">Verivikasi kesesuain PB</p>
                                     </div>
                                  </div>
                                  <div class="col-sm ml-2">
                                     <div class="pb-5 text-center">
-                                       <img src="image/ills/Illustrasi3d_4.png" class="mb-2" width="150">
+                                       <img src="image/ills/Illustrasi3d_4.png" class="mb-2" width="120">
                                        <h5><b>4. System</b></h5>
                                        <p class="text-p">Publish No. PAR ONLINE</p>
                                     </div>
                                  </div>
                               </div>
                               <!-- 2 -->
-                            
-                                 <div class="col-sm ml-2">
+                              <div class="row">
+                                 <div class="col-sm ml-4">
                                     <div class="pb-5 text-center">
-                                       <img src="image/ills/Illustrasi3d_5.png" class="mb-2" width="156">
+                                       <img src="image/ills/Illustrasi3d_5.png" class="mb-2" width="120">
                                        <h5><b>5. System</b></h5>
                                        <p class="text-p">PAR. ONLINE akan masuk pada List PAR yang akan melewati proses Approval</p>
                                     </div>
                                  </div>
-                                 <div class="col-sm ml-2">
+                                 <div class="col-sm">
                                     <div class="pb-5 text-center">
-                                       <img src="image/ills/Illustrasi3d_6.png" class="mb-2" width="175">
+                                       <img src="image/ills/Illustrasi3d_6.png" class="mb-2" width="120">
                                        <h5><b>6. Approval Pejabat</b></h5>
-                                       <p class="text-left text-p">1. Approval Atasan Langsung(A)</p>
-                                       <p class="text-left text-p">2. Approval Khusus(C - Barang Khusus)</p>
-                                       <p class="text-left text-p">3. Approval Proxy Tinggi(B)</p>
+                                       <p class="text-p">1. Approval Atasan Langsung(A)</p>
+                                       <p class="text-p">2. Approval Khusus(C - Barang Khusus)</p>
+                                       <p class="text-p">3. Approval Proxy Tinggi(B)</p>
                                     </div>
                                  </div>
-                                 <div class="col-sm ml-2">
+                                 <div class="col-sm">
                                     <div class="pb-5 text-center">
-                                       <img src="image/ills/Illustrasi3d_7.png" class="mb-2" width="150">
+                                       <img src="image/ills/Illustrasi3d_7.png" class="mb-2" width="120">
                                        <h5><b>7. Approval Releaser</b></h5>
                                        <p class="text-p">Approval Manager Procurement</p>
                                     </div>
                                  </div>
-                                 <div class="col-sm ml-2">
+                                 <div class="col-sm">
                                     <div class="pb-5 text-center">
-                                       <img src="image/ills/Illustrasi3d_8.png" class="mb-2" width="175">
+                                       <img src="image/ills/Illustrasi3d_8.png" class="mb-2" width="140">
                                        <h5><b>8. System</b></h5>
                                        <p class="text-p">Publish No. PAR CPM</p>
                                     </div>
                                  </div>
-                              
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -335,7 +343,7 @@
                         <div class="card-body">
                            <h4 style="font-weight:600;">Status Apa saja yang ada terdapat pada PB & PAR</h4>
                            <!-- Info 1 -->
-                           <div class="col-12 mt-3" id="accordion">
+                           <div class="mt-3" id="accordion">
                               <a class="btn btn-outline-dark" data-toggle="collapse" href="#collapse1">
                               <i class="fas fa-angle-down"></i> PERLU KONFIRMASI CHECKER</a>
                               <div id="collapse1" class="collapse" data-parent="#accordion">
@@ -350,7 +358,7 @@
                               </div>
                            </div>
                            <!-- Info 2 -->
-                           <div class="col-12 mt-3" id="accordion">
+                           <div class="mt-3" id="accordion">
                               <a class="btn btn-outline-dark" data-toggle="collapse" href="#collapse2">
                               <i class="fas fa-angle-down"></i> PERLU KONFIRMASI REQUESTER</a>
                               <div id="collapse2" class="collapse" data-parent="#accordion">
@@ -365,7 +373,7 @@
                               </div>
                            </div>
                            <!-- Info 3 -->
-                           <div class="col-12 mt-3" id="accordion">
+                           <div class="mt-3" id="accordion">
                               <a class="btn btn-outline-dark" data-toggle="collapse" href="#collapse3">
                               <i class="fas fa-angle-down"></i> PERLU KONFIRMASI APPROVER</a>
                               <div id="collapse3" class="collapse" data-parent="#accordion">
@@ -380,7 +388,7 @@
                               </div>
                            </div>
                            <!-- Info 4 -->
-                           <div class="col-12 mt-3" id="accordion">
+                           <div class="mt-3" id="accordion">
                               <a class="btn btn-outline-dark" data-toggle="collapse" href="#collapse4">
                               <i class="fas fa-angle-down"></i> DIMINTA REVISI</a>
                               <div id="collapse4" class="collapse" data-parent="#accordion">
@@ -395,7 +403,7 @@
                               </div>
                            </div>
                            <!-- Info 5 -->
-                           <div class="col-12 mt-3" id="accordion">
+                           <div class="mt-3" id="accordion">
                               <a class="btn btn-outline-dark" data-toggle="collapse" href="#collapse5">
                               <i class="fas fa-angle-down"></i> DIBATALKAN</a>
                               <div id="collapse5" class="collapse" data-parent="#accordion">
@@ -418,10 +426,10 @@
       <!-- ./col -->
       </div>
       <footer class="main-footer footer">
-        <strong>Copyright 2020 All Rights Reserved</strong>
-        <div class="float-right d-none d-sm-inline-block">
-          <strong>PT. Sumber Alfaria Trijaya, Tbk</strong>
-        </div>
+      <strong>Copyright 2020 All Rights Reserved</strong>
+      <div class="float-right d-none d-sm-inline-block">
+      <strong>PT. Sumber Alfaria Trijaya, Tbk</strong>
+      </div>
       </footer>
       <!-- /.main dashboard -->
       </aside>
