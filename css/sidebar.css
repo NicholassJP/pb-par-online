@@ -1,0 +1,25 @@
+.btn-rounded {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.btn-rounded-left {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.blck-clr {
+  color: #000000;
+}
+
+.text-box1 {
+  width: 50px;
+  height: 150px;
+  background-color: rgb(70, 19, 255);
+}
+
+.text-p {
+  font-size: 16px;
+}

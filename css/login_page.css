@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --blue: #343f53;
+  --blue_hover: #1c1d20;
+  --blue_secondary: #026ee2;
+  --blue_secondary_hover: #0861c0;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+}
+
+.card {
+  border-top: solid 5px red;
+  width: 450px;
+  height: 450px;
+  background: white;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0px 13px 26px rgba(0, 0, 0, 0.16);
+}
+
+.login-form {
+  padding: 1rem 9rem;
+}
+
+.btn-primary {
+  background-color: var(--blue);
+  border-radius: 6px;
+  border-color: transparent;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--blue_hover);
+  border-color: transparent;
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--blue_hover);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background-color: var(--blue_secondary);
+  border-radius: 6px;
+  border-color: transparent;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background-color: var(--blue_secondary_hover);
+  border-color: transparent;
+}
+
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: var(--blue_secondary_hover);
+  border-color: transparent;
+  box-shadow: none;
+}

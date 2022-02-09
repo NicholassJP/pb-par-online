@@ -1,0 +1,16 @@
+#footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: black;
+  background: #e1ecff !important;
+}
+
+#footer p {
+  padding-top: 1rem;
+  margin-left: 1rem;
+}
+
+.text-right {
+  float: right;
+}
