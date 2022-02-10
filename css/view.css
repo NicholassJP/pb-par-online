@@ -1,0 +1,20 @@
+.card-1 {
+  background: #ebf9fe;
+  border: 1px solid #dee2e6;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.card-2 {
+  background: #fee7e7;
+  border: 1px solid #dee2e6;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.card-status {
+  background: #c45698;
+  border-radius: 8px;
+  width: 5rem;
+  height: 25px;
+}

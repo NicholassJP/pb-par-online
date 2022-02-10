@@ -19,6 +19,20 @@
   width: 600px;
 }
 
+.btn-rounded5 {
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #fefaf2;
+  width: 170px;
+}
+
+.btn-rounded6 {
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #fefaf2;
+  width: 225px;
+}
+
 .btn-rounded {
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -43,4 +57,8 @@
 
 .text-p {
   font-size: 16px;
+}
+
+hr.style1{
+	border-top: 1px solid #8c8b8b;
 }
