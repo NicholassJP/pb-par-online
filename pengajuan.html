@@ -1,558 +1,798 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>PB PAR ONLINE</title>
-      <!-- Bootstrap -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-      <!-- Google Font: Source Sans Pro -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-      <!-- Font Awesome -->
-      <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-      <!-- Ionicons -->
-      <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-      <!-- Tempusdominus Bootstrap 4 -->
-      <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-      <!-- iCheck -->
-      <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-      <!-- JQVMap -->
-      <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-      <!-- Theme style -->
-      <link rel="stylesheet" href="dist/css/adminlte.min.css">
-      <!-- overlayScrollbars -->
-      <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-      <!-- Daterange picker -->
-      <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-      <!-- summernote -->
-      <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
-      <!-- CSS -->
-      <link rel="stylesheet" href="css/footer.css">
-      <link rel="stylesheet" href="css/pengajuan.css">
-      <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
-      <script src="https://kit.fontawesome.com/90a0b526e4.js" crossorigin="anonymous"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/table.js"></script>      
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>  
-        <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script> 
-   </head>
-   <body class="hold-transition sidebar-mini layout-fixed">
-      <div class="wrapper">
-         <!-- Navbar -->
-         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Left navbar links -->
-            <ul class="navbar-nav">
-               <li class="nav-item">
-                  <a class="nav-link btn-rounded-left ml-3" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-               </li>
-            </ul>
-            <!-- Right navbar links -->
-            <ul class="navbar-nav ml-auto">
-               <li class="nav-item">
-                  <a class="nav-link">
-                     <p class="blck-clr">Releaser</p>
-                  </a>
-               </li>
-               <li class="nav-item">
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle btn-rounded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Ahmad Lexmono
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <a class="dropdown-item" href="#">A</a>
-                     <a class="dropdown-item" href="#">B</a>
-                     <div class="dropdown-divider"></div>
-                     <a class="dropdown-item" href="#">C</a>
-                  </div>
-               </li>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="index.html">
-                  <img src="image/icn/icon_profil.png">
-                  </a>
-               </li>
-            </ul>
-         </nav>
-         <!-- /.navbar -->
-         <!-- Main Sidebar Container -->
-         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Sidebar -->
-            <div class="sidebar">
-               <!-- Sidebar user panel (optional) -->
-               <div class="d-flex">
-                  <div class="image ml-4 mt-3 mb-4">
-                     <img src="image/ills/Logotype-apps-2.png" alt="">
-                  </div>
-               </div>
-               <!-- Sidebar Menu -->
-               <nav class="mt-2">
-                  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                     <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
-                     <li class="nav-item">
-                        <a href="dashboard.html" class="nav-link">
-                           <img src="image/icn/Icon_Home.png" class="mr-2">
-                           <p>
-                              Home
-                           </p>
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="buat_pengajuan.html" class="nav-link">
-                           <img src="image/icn/Icon_new_document.png" class="mr-2">
-                           <p>
-                              Buat Pengajuan
-                           </p>
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="pengajuan.html" class="nav-link active">
-                           <img src="image/icn/icon_list.png" class="mr-2">
-                           <p>
-                              List Pengajuan
-                              <span class="badge badge-danger right">15</span>
-                              <i class="ml-2 fas fa-angle-right"></i>
-                           </p>
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="history.html" class="nav-link">
-                           <img src="image/icn/icon_list.png" class="mr-2">
-                           <p>
-                              History PAR
-                              <span class="badge badge-danger right">15</span>
-                           </p>
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="bantuan.html" class="nav-link">
-                           <img src="image/icn/icon_question.png" class="mr-2">
-                           <p>
-                              Bantuan
-                           </p>
-                        </a>
-                     </li>
-                  </ul>
-               </nav>
-               <!-- /.sidebar-menu -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PB PAR ONLINE</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- Ionicons -->
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+    />
+    <!-- iCheck -->
+    <link
+      rel="stylesheet"
+      href="plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+    />
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+    <!-- overlayScrollbars -->
+    <link
+      rel="stylesheet"
+      href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+    />
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/pengajuan.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/90a0b526e4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/table.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link btn-rounded-left ml-3"
+              data-widget="pushmenu"
+              href="#"
+              role="button"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+        </ul>
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link">
+              <p class="blck-clr">Releaser</p>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle btn-rounded"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Ahmad Lexmono
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">A</a>
+              <a class="dropdown-item" href="#">B</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">C</a>
             </div>
-            <!-- /.sidebar -->
-         </aside>
-         <!-- Main Dashboard -->
-         <div class="content-wrapper">
-            <!-- Main content -->
-            <div class="container-fluid">
-                <div class="row mb-2 ml-2">
-                    <div class="col-sm-3">
-                       <h1 class="mt-3">Pengajuan Baru</h1>
-                    </div>
-                    <div class="col">
-                       <p style="font-weight: 500; float: right; color: black;" class="nav-link btn-rounded2 mr-2 mt-4">
-                          <span></i></span>
-                          <bold style="font-weight: 700;">Time: </bold>
-                          Senin, 26/Jul/2021 <i class="fas fa-circle fa-xs"></i> 12:24:11 AM
-                       </p>
-                    </div>
-                 </div>
-            <div class="col-sm-12">
-                <div class="card card-navy card-tabs">
-                  <div class="card-header p-0 pt-1">
-                    <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
-                      <li class="nav-item">
-                        <a class="nav-link active" id="custom-tabs-one-pb-tab" data-toggle="pill" href="#custom-tabs-one-pb" role="tab" aria-controls="custom-tabs-one-pb" aria-selected="true">PB</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="custom-tabs-one-revisi-tab" data-toggle="pill" href="#custom-tabs-one-revisi" role="tab" aria-controls="custom-tabs-one-revisi" aria-selected="false">Revisi PB <span class="badge badge-danger right ml-2">10</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <div class="tab-content" id="custom-tabs-one-tabContent">
-                       <!-- Tab PB -->
-                      <div class="tab-pane fade show active" id="custom-tabs-one-pb" role="tabpanel" aria-labelledby="custom-tabs-one-pb-tab">
-                        <div class="row mb-3">
-                           <div class="col-sm">
-                              <label for="tanggal">Range Tanggal :</label>
-                              <input type="date" name="tanggal" id="tanggal" class="form-control">
-                          </div>
-                           <div class="col-sm">
-                               <label for="jenis">Jenis Pengajuan</label>
-                               <select class="form-select" id="jenis">
-                                   <option value="">Pilih Jenis Pengajuan</option>
-                                   <option value="">a</option>
-                                   <option value="">b</option>
-                               </select>
-                           </div>
-                           <div class="col-sm">
-                              <label for="jenis">Status</label>
-                              <select class="form-select" id="status">
-                                  <option value="">Pilih Status Pengajuan</option>
-                                  <option value="">a</option>
-                                  <option value="">b</option>
-                              </select>
-                          </div>
-                           <div class="col-sm-4">
-                              <label for="search">Pencarian</label>
-                              <div class="input-group">
-                                 <input placeholder="Cari No.PB,Judul Pengajuan NIK/Nama Pemohon, dll" class="form-control border-right-0 border" type="search" id="example-search-input">
-                                 <span class="input-group-append">
-                                   <button class="btn border-left-0 border" type="button">
-                                         <i class="fa fa-search"></i>
-                                   </button>
-                                 </span>
-                             </div>
-                          </div>
-                          <div class="col-sm" style="margin-top: 31px;">
-                             <button class="btn btn-info">Cari</button>
-                           </div>
-                       </div>
-                       <table id="table" class="table-responsive-lg w-100 border">
-                        <thead>
-                            <tr>
-                                <td>#</td>
-                                <td>No PB</td>
-                                <td>Tgl. Buat</td>
-                                <td>Judul Pengajuan</td>
-                                <td>Pemohon</td>
-                                <td>Jenis Pengajuan</td>
-                                <td>Status</td>
-                                <td>Detail</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>B-F18-103681</td>
-                                <td>21/10/2021</td>
-                                <td>Pengajuan VPN</td>
-                                <td>05040151 - Imam Rosyad Setiaji</td>
-                                <td>Baru</td>
-                                <td>Sudah menjadi PAR </td>
-                                <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-                            </tr>
-                           <tr>
-                               <td>2</td>
-                               <td>B-F18-103682</td>
-                               <td>21/10/2021</td>
-                               <td>Pengajuan VPN</td>
-                               <td>05040151 - Imam Rosyad Setiaji</td>
-                               <td>Baru</td>
-                               <td>Perlu Konfirmasi Checker GS</td>
-                               <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-                           </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>B-F18-103683</td>
-                            <td>26/10/2021</td>
-                            <td>Pengajuan VPN INSTALLATION</td>
-                            <td>15083311 - Yayat Sudrajat</td>
-                            <td>Penggantian</td>
-                            <td>Perlu Konfirmasi Checker GS </td>
-                            <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-                        </tr>
-                     <tr>
-                         <td>4</td>
-                         <td>B-F18-103684</td>
-                         <td>26/10/2021</td>
-                         <td>Pengajuan VPN INSTALLATION</td>
-                         <td>15083311 - Yayat Sudrajat</td>
-                         <td>Penggantian</td>
-                         <td>Perlu Konfirmasi Checker Khusus</td>
-                         <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-                     </tr>
-                  <tr>
-                      <td>5</td>
-                      <td>B-F18-103685</td>
-                      <td>28/10/2021</td>
-                      <td>Pengajuan EPSON LQ 2180</td>
-                      <td>02030062- Ebron Ibrahim</td>
-                      <td>Baru</td>
-                      <td>Perlu Konfirmasi Checker Khusus</td>
-                      <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-                  </tr>
-               <tr>
-                   <td>6</td>
-                   <td>B-F18-103686</td>
-                   <td>28/10/2021</td>
-                   <td>Pengajuan EPSON LQ 2180</td>
-                   <td>02030062- Ebron Ibrahim</td>
-                   <td>Backup</td>
-                   <td>Perlu Konfirmasi Checker Pruchasing</td>
-                   <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-               </tr>
-            <tr>
-                <td>7</td>
-                <td>B-F18-103687</td>
-                <td>22/10/2021</td>
-                <td>Pengajuan ACER VERITON 5600G </td>
-                <td>02030062- Ebron Ibrahim</td>
-                <td>Backup</td>
-                <td>Perlu Konfirmasi Checker Pruchasing</td>
-                <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-            </tr>
-         <tr>
-             <td>8</td>
-             <td>B-F18-103688</td>
-             <td>21/10/2021</td>
-             <td>Pengajuan ACER VERITON 5600G </td>
-             <td>03031516 - Imam Rosyad Setiaji</td>
-             <td>Baru</td>
-             <td>Perlu Konfirmasi Requester</td>
-             <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-         </tr>
-      <tr>
-          <td>9</td>
-          <td>B-F18-103689</td>
-          <td>30/10/2021</td>
-          <td>Pengajuan ACER VERITON 5600G </td>
-          <td>03031516 - Imam Rosyad Setiaji</td>
-          <td>Baru</td>
-          <td>Diminta Revisi</td>
-          <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-      </tr>
-   <tr>
-       <td>10</td>
-       <td>B-F18-1036810</td>
-       <td>30/10/2021</td>
-       <td>Pengajuan ACER VERITON 5600G </td>
-       <td>03031516 - Imam Rosyad Setiaji</td>
-       <td>Baru</td>
-       <td>Diminta Revisi</td>
-       <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-   </tr>
-   <tr>
-      <td>11</td>
-      <td>B-F18-103681</td>
-      <td>21/10/2021</td>
-      <td>Pengajuan VPN</td>
-      <td>05040151 - Imam Rosyad Setiaji</td>
-      <td>Baru</td>
-      <td>Sudah menjadi PAR </td>
-      <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-  </tr>
-                        </tbody>
-                    </table>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <img src="image/icn/icon_profil.png" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.navbar -->
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user panel (optional) -->
+          <div class="d-flex">
+            <div class="image ml-4 mt-3 mb-4">
+              <img src="image/ills/Logotype-apps-2.png" alt="" />
+            </div>
+          </div>
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                <a href="dashboard.html" class="nav-link">
+                  <img src="image/icn/Icon_Home.png" class="mr-2" />
+                  <p>Home</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="buat_pengajuan.html" class="nav-link">
+                  <img src="image/icn/Icon_new_document.png" class="mr-2" />
+                  <p>Buat Pengajuan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pengajuan.html" class="nav-link active">
+                  <img src="image/icn/icon_list.png" class="mr-2" />
+                  <p>
+                    List Pengajuan
+                    <span class="badge badge-danger right">15</span>
+                    <i class="ml-2 fas fa-angle-right"></i>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="history.html" class="nav-link">
+                  <img src="image/icn/icon_list.png" class="mr-2" />
+                  <p>
+                    History PAR
+                    <span class="badge badge-danger right">15</span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="bantuan.html" class="nav-link">
+                  <img src="image/icn/icon_question.png" class="mr-2" />
+                  <p>Bantuan</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+      <!-- Main Dashboard -->
+      <div class="content-wrapper">
+        <!-- Main content -->
+        <div class="container-fluid">
+          <div class="row mb-2 ml-2">
+            <div class="col-sm-3">
+              <h1 class="mt-3">Pengajuan Baru</h1>
+            </div>
+            <div class="col">
+              <p
+                style="font-weight: 500; float: right; color: black"
+                class="nav-link btn-rounded2 mr-2 mt-4"
+              >
+                <bold style="font-weight: 700">Time: </bold>
+                Senin, 26/Jul/2021 <i class="fas fa-circle fa-xs"></i> 12:24:11
+                AM
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="card card-navy card-tabs">
+              <div class="card-header p-0 pt-1">
+                <ul
+                  class="nav nav-tabs"
+                  id="custom-tabs-one-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="custom-tabs-one-pb-tab"
+                      data-toggle="pill"
+                      href="#custom-tabs-one-pb"
+                      role="tab"
+                      aria-controls="custom-tabs-one-pb"
+                      aria-selected="true"
+                      >PB</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="custom-tabs-one-revisi-tab"
+                      data-toggle="pill"
+                      href="#custom-tabs-one-revisi"
+                      role="tab"
+                      aria-controls="custom-tabs-one-revisi"
+                      aria-selected="false"
+                      >Revisi PB
+                      <span class="badge badge-danger right ml-2">10</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content" id="custom-tabs-one-tabContent">
+                  <!-- Tab PB -->
+                  <div
+                    class="tab-pane fade show active"
+                    id="custom-tabs-one-pb"
+                    role="tabpanel"
+                    aria-labelledby="custom-tabs-one-pb-tab"
+                  >
+                    <div class="row mb-3">
+                      <div class="col-sm">
+                        <label for="tanggal">Range Tanggal :</label>
+                        <input
+                          type="date"
+                          name="tanggal"
+                          id="tanggal"
+                          class="form-control"
+                        />
                       </div>
-                      <!-- Tab Revisi -->
-                      <div class="tab-pane fade" id="custom-tabs-one-revisi" role="tabpanel" aria-labelledby="custom-tabs-one-revisi-tab"> 
-                        <div class="row mb-3">
-                           <div class="col-sm">
-                              <label for="tanggal">Range Tanggal :</label>
-                              <input type="date" name="tanggal" id="tanggal" class="form-control">
-                          </div>
-                           <div class="col-sm">
-                               <label for="jenis">Jenis Pengajuan</label>
-                               <select class="form-select" id="jenis">
-                                   <option value="">Semua</option>
-                                   <option value="">a</option>
-                                   <option value="">b</option>
-                               </select>
-                           </div>
-                           <div class="col-sm">
-                              <label for="jenis">Status</label>
-                              <input type="text" class="form-control" placeholder="Diminta Revisi" readonly></input>
-                          </div>
-                           <div class="col-sm-4">
-                              <label for="search">Pencarian</label>
-                              <div class="input-group">
-                                 <input placeholder="Cari No.PB,Judul Pengajuan NIK/Nama Pemohon, dll" class="form-control border-right-0 border" type="search" id="example-search-input">
-                                 <span class="input-group-append">
-                                   <button class="btn border-left-0 border" type="button">
-                                         <i class="fa fa-search"></i>
-                                   </button>
-                                 </span>
-                             </div>
-                          </div>
-                          <div class="col-sm" style="margin-top: 31px;">
-                             <button class="btn btn-info">Cari</button>
-                           </div>
-                       </div>
-                        <table id="table" class="table-responsive-lg w-100 border">
-                           <thead>
-                               <tr>
-                                   <td>#</td>
-                                   <td>No PB</td>
-                                   <td>Tgl. Buat</td>
-                                   <td>Judul Pengajuan</td>
-                                   <td>Pemohon</td>
-                                   <td>Jenis Pengajuan</td>
-                                   <td>Status</td>
-                                   <td>Detail</td>
-                               </tr>
-                              </thead>
-                           <tbody>
-                               <tr>
-                                   <td>1</td>
-                                   <td>B-F18-103681</td>
-                                   <td>21/10/2021</td>
-                                   <td>Pengajuan VPN</td>
-                                   <td>05040151 - Imam Rosyad Setiaji</td>
-                                   <td>Baru</td>
-                                   <td>Diminta Revisi</td>
-                                   <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-                               </tr>
-                              <tr>
-                                  <td>2</td>
-                                  <td>B-F18-103682</td>
-                                  <td>21/10/2021</td>
-                                  <td>Pengajuan VPN</td>
-                                  <td>05040151 - Imam Rosyad Setiaji</td>
-                                  <td>Baru</td>
-                                  <td>Diminta Revisi</td>
-                                  <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-                              </tr>
-                           <tr>
-                               <td>3</td>
-                               <td>B-F18-103683</td>
-                               <td>26/10/2021</td>
-                               <td>Pengajuan VPN INSTALLATION</td>
-                               <td>15083311 - Yayat Sudrajat</td>
-                               <td>Penggantian</td>
-                               <td>Diminta Revisi</td>
-                               <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-                           </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>B-F18-103684</td>
-                            <td>26/10/2021</td>
-                            <td>Pengajuan VPN INSTALLATION</td>
-                            <td>15083311 - Yayat Sudrajat</td>
-                            <td>Penggantian</td>
-                            <td>Diminta Revisi</td>
-                            <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-                        </tr>
-                     <tr>
-                         <td>5</td>
-                         <td>B-F18-103685</td>
-                         <td>28/10/2021</td>
-                         <td>Pengajuan EPSON LQ 2180</td>
-                         <td>02030062- Ebron Ibrahim</td>
-                         <td>Baru</td>
-                         <td>Diminta Revisi</td>
-                         <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-                     </tr>
-                  <tr>
-                      <td>6</td>
-                      <td>B-F18-103686</td>
-                      <td>28/10/2021</td>
-                      <td>Pengajuan EPSON LQ 2180</td>
-                      <td>02030062- Ebron Ibrahim</td>
-                      <td>Backup</td>
-                      <td>Diminta Revisi</td>
-                      <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-                  </tr>
-               <tr>
-                   <td>7</td>
-                   <td>B-F18-103687</td>
-                   <td>22/10/2021</td>
-                   <td>Pengajuan ACER VERITON 5600G </td>
-                   <td>02030062- Ebron Ibrahim</td>
-                   <td>Backup</td>
-                   <td>Diminta Revisi</td>
-                   <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-               </tr>
-            <tr>
-                <td>8</td>
-                <td>B-F18-103688</td>
-                <td>21/10/2021</td>
-                <td>Pengajuan ACER VERITON 5600G </td>
-                <td>03031516 - Imam Rosyad Setiaji</td>
-                <td>Baru</td>
-                <td>Diminta Revisi</td>
-                <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-            </tr>
-         <tr>
-             <td>9</td>
-             <td>B-F18-103689</td>
-             <td>30/10/2021</td>
-             <td>Pengajuan ACER VERITON 5600G </td>
-             <td>03031516 - Imam Rosyad Setiaji</td>
-             <td>Baru</td>
-             <td>Diminta Revisi</td>
-             <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-         </tr>
-      <tr>
-          <td>10</td>
-          <td>B-F18-1036810</td>
-          <td>30/10/2021</td>
-          <td>Pengajuan ACER VERITON 5600G </td>
-          <td>03031516 - Imam Rosyad Setiaji</td>
-          <td>Baru</td>
-          <td>Diminta Revisi</td>
-          <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-      </tr>
-      <tr>
-         <td>11</td>
-         <td>B-F18-103681</td>
-         <td>21/10/2021</td>
-         <td>Pengajuan VPN</td>
-         <td>05040151 - Imam Rosyad Setiaji</td>
-         <td>Baru</td>
-         <td>Diminta Revisi</td>
-         <td><a href="detail_pengajuan.html" class="btn btn-secondary disble">Lihat</a></td>
-     </tr>
-                           </tbody>
-                       </table>
+                      <div class="col-sm">
+                        <label for="jenis">Jenis Pengajuan</label>
+                        <select class="form-select" id="jenis">
+                          <option value="">Pilih Jenis Pengajuan</option>
+                          <option value="">a</option>
+                          <option value="">b</option>
+                        </select>
+                      </div>
+                      <div class="col-sm">
+                        <label for="jenis">Status</label>
+                        <select class="form-select" id="status">
+                          <option value="">Pilih Status Pengajuan</option>
+                          <option value="">a</option>
+                          <option value="">b</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="search">Pencarian</label>
+                        <div class="input-group">
+                          <input
+                            placeholder="Cari No.PB,Judul Pengajuan NIK/Nama Pemohon, dll"
+                            class="form-control border-right-0 border"
+                            type="search"
+                            id="example-search-input"
+                          />
+                          <span class="input-group-append">
+                            <button
+                              class="btn border-left-0 border"
+                              type="button"
+                            >
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-sm" style="margin-top: 31px">
+                        <button class="btn btn-info">Cari</button>
+                      </div>
                     </div>
+                    <table id="table" class="table-responsive-lg w-100 border">
+                      <thead>
+                        <tr>
+                          <td>#</td>
+                          <td>No PB</td>
+                          <td>Tgl. Buat</td>
+                          <td>Judul Pengajuan</td>
+                          <td>Pemohon</td>
+                          <td>Jenis Pengajuan</td>
+                          <td>Status</td>
+                          <td>Detail</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>B-F18-103681</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Sudah menjadi PAR</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>B-F18-103682</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Perlu Konfirmasi Checker GS</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>B-F18-103683</td>
+                          <td>26/10/2021</td>
+                          <td>Pengajuan VPN INSTALLATION</td>
+                          <td>15083311 - Yayat Sudrajat</td>
+                          <td>Penggantian</td>
+                          <td>Perlu Konfirmasi Checker GS</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>B-F18-103684</td>
+                          <td>26/10/2021</td>
+                          <td>Pengajuan VPN INSTALLATION</td>
+                          <td>15083311 - Yayat Sudrajat</td>
+                          <td>Penggantian</td>
+                          <td>Perlu Konfirmasi Checker Khusus</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>B-F18-103685</td>
+                          <td>28/10/2021</td>
+                          <td>Pengajuan EPSON LQ 2180</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Baru</td>
+                          <td>Perlu Konfirmasi Checker Khusus</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>B-F18-103686</td>
+                          <td>28/10/2021</td>
+                          <td>Pengajuan EPSON LQ 2180</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Backup</td>
+                          <td>Perlu Konfirmasi Checker Pruchasing</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>B-F18-103687</td>
+                          <td>22/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Backup</td>
+                          <td>Perlu Konfirmasi Checker Pruchasing</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>B-F18-103688</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Perlu Konfirmasi Requester</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>B-F18-103689</td>
+                          <td>30/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>B-F18-1036810</td>
+                          <td>30/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>11</td>
+                          <td>B-F18-103681</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Sudah menjadi PAR</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- Tab Revisi -->
+                  <div
+                    class="tab-pane fade"
+                    id="custom-tabs-one-revisi"
+                    role="tabpanel"
+                    aria-labelledby="custom-tabs-one-revisi-tab"
+                  >
+                    <div class="row mb-3">
+                      <div class="col-sm">
+                        <label for="tanggal">Range Tanggal :</label>
+                        <input
+                          type="date"
+                          name="tanggal"
+                          id="tanggal"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-sm">
+                        <label for="jenis">Jenis Pengajuan</label>
+                        <select class="form-select" id="jenis">
+                          <option value="">Semua</option>
+                          <option value="">a</option>
+                          <option value="">b</option>
+                        </select>
+                      </div>
+                      <div class="col-sm">
+                        <label for="jenis">Status</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Diminta Revisi"
+                          readonly
+                        />
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="search">Pencarian</label>
+                        <div class="input-group">
+                          <input
+                            placeholder="Cari No.PB,Judul Pengajuan NIK/Nama Pemohon, dll"
+                            class="form-control border-right-0 border"
+                            type="search"
+                            id="example-search-input"
+                          />
+                          <span class="input-group-append">
+                            <button
+                              class="btn border-left-0 border"
+                              type="button"
+                            >
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-sm" style="margin-top: 31px">
+                        <button class="btn btn-info">Cari</button>
+                      </div>
+                    </div>
+                    <table id="table" class="table-responsive-lg w-100 border">
+                      <thead>
+                        <tr>
+                          <td>#</td>
+                          <td>No PB</td>
+                          <td>Tgl. Buat</td>
+                          <td>Judul Pengajuan</td>
+                          <td>Pemohon</td>
+                          <td>Jenis Pengajuan</td>
+                          <td>Status</td>
+                          <td>Detail</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>B-F18-103681</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>B-F18-103682</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>B-F18-103683</td>
+                          <td>26/10/2021</td>
+                          <td>Pengajuan VPN INSTALLATION</td>
+                          <td>15083311 - Yayat Sudrajat</td>
+                          <td>Penggantian</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>B-F18-103684</td>
+                          <td>26/10/2021</td>
+                          <td>Pengajuan VPN INSTALLATION</td>
+                          <td>15083311 - Yayat Sudrajat</td>
+                          <td>Penggantian</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>B-F18-103685</td>
+                          <td>28/10/2021</td>
+                          <td>Pengajuan EPSON LQ 2180</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>B-F18-103686</td>
+                          <td>28/10/2021</td>
+                          <td>Pengajuan EPSON LQ 2180</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Backup</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>B-F18-103687</td>
+                          <td>22/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Backup</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>B-F18-103688</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>B-F18-103689</td>
+                          <td>30/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>B-F18-1036810</td>
+                          <td>30/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>11</td>
+                          <td>B-F18-103681</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_pengajuan.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
             </div>
-         </div>
-         </div>
-         <!-- footer -->
-         <footer class="main-footer footer">
-            <strong>Copyright 2020 All Rights Reserved</strong>
-            <div class="float-right d-none d-sm-inline-block">
-               <strong>PT. Sumber Alfaria Trijaya, Tbk</strong>
-            </div>
-         </footer>
-         <!-- /.main dashboard -->
-         </aside>
-         <!-- /.control-sidebar -->
+          </div>
+        </div>
       </div>
-      <!-- ./wrapper -->
-      <script>
-         $(document).ready(function() {
-             $('#table').DataTable();
-         } );
-         
-         $('table').dataTable({searching: false});
-     </script> 
-      <!-- jQuery -->
-      <script src="plugins/jquery/jquery.min.js"></script>
-      <!-- jQuery UI 1.11.4 -->
-      <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-      <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-      <script>
-         $.widget.bridge('uibutton', $.ui.button)
-      </script>
-      <!-- Bootstrap 4 -->
-      <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <!-- ChartJS -->
-      <script src="plugins/chart.js/Chart.min.js"></script>
-      <!-- Sparkline -->
-      <script src="plugins/sparklines/sparkline.js"></script>
-      <!-- JQVMap -->
-      <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-      <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-      <!-- jQuery Knob Chart -->
-      <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-      <!-- daterangepicker -->
-      <script src="plugins/moment/moment.min.js"></script>
-      <script src="plugins/daterangepicker/daterangepicker.js"></script>
-      <!-- Tempusdominus Bootstrap 4 -->
-      <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-      <!-- Summernote -->
-      <script src="plugins/summernote/summernote-bs4.min.js"></script>
-      <!-- overlayScrollbars -->
-      <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-      <!-- AdminLTE App -->
-      <script src="dist/js/adminlte.js"></script>
-      <!-- AdminLTE for demo purposes -->
-      <script src="dist/js/pages/dashboard.js"></script>
-      <!-- jQuery -->
-      <script src="../../plugins/jquery/jquery.min.js"></script>
-   </body>
+      <!-- footer -->
+      <footer class="main-footer footer">
+        <strong>Copyright 2020 All Rights Reserved</strong>
+        <div class="float-right d-none d-sm-inline-block">
+          <strong>PT. Sumber Alfaria Trijaya, Tbk</strong>
+        </div>
+      </footer>
+      <!-- /.main dashboard -->
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <script>
+      $(document).ready(function () {
+        $("#table").DataTable();
+      });
+
+      $("table").dataTable({ searching: false });
+    </script>
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge("uibutton", $.ui.button);
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/pages/dashboard.js"></script>
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+  </body>
 </html>
