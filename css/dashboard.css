@@ -1,26 +1,44 @@
 .btn-rounded {
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 20px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.btn-rounded-left {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.blck-clr {
+  color: #000000;
+}
+
+.text-box1 {
+  width: 50px;
+  height: 150px;
+  background-color: rgb(70, 19, 255);
+}
+
+.text-p {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 766px) {
+  .responsive-mobile {
+    background-color: #13847e;
+    height: 50px;
   }
-  
-  .btn-rounded-left {
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 10px;
+  .responsive-mobile1 {
+    font-weight: 600;
+    color: #fff;
   }
-  
-  .blck-clr {
-    color: #000000;
+  .responsive-mobile3 {
+    background-color: #005aab;
+    height: 50px;
   }
-  
-  .text-box1 {
-    width: 50px;
-    height: 150px;
-    background-color: rgb(70, 19, 255);
+  .responsive-mobile4 {
+    font-weight: 600;
+    color: #fff;
   }
-  
-  .text-p {
-    font-size: 16px;
-  }
-  
+}
