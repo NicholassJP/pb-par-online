@@ -13,8 +13,25 @@
 }
 
 .card-status {
+  width: 100px;
   background: #c45698;
   border-radius: 8px;
-  width: 5rem;
-  height: 25px;
+}
+
+.ml-8 {
+  margin-left: 25px;
+}
+
+.maker {
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .biaya {
+    text-align: center;
+  }
+  .ml-8 {
+    margin-left: 0px;
+  }
 }

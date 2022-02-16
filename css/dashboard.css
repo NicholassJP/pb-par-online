@@ -24,21 +24,15 @@
   font-size: 16px;
 }
 
-@media only screen and (max-width: 766px) {
-  .responsive-mobile {
-    background-color: #13847e;
-    height: 50px;
+.responsive-card {
+  justify-content: center;
+}
+
+@media (min-width: 1440px) {
+  .responsive-card {
+    float: right;
   }
-  .responsive-mobile1 {
-    font-weight: 600;
-    color: #fff;
-  }
-  .responsive-mobile3 {
-    background-color: #005aab;
-    height: 50px;
-  }
-  .responsive-mobile4 {
-    font-weight: 600;
-    color: #fff;
+  .margin-left {
+    margin-left: 20px;
   }
 }

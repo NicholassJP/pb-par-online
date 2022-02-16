@@ -1,15 +1,19 @@
 .btn-rounded1 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   box-sizing: border-box;
   border-radius: 20px;
   background-color: #fefaf2;
-  width: 230px;
 }
 
 .btn-rounded2 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   box-sizing: border-box;
   border-radius: 20px;
   background-color: #fefaf2;
-  width: 300px;
 }
 
 .btn-rounded3 {
@@ -19,18 +23,12 @@
   width: 600px;
 }
 
-.btn-rounded5 {
-  box-sizing: border-box;
-  border-radius: 20px;
-  background-color: #fefaf2;
-  width: 170px;
-}
-
 .btn-rounded6 {
   box-sizing: border-box;
   border-radius: 20px;
   background-color: #fefaf2;
-  width: 225px;
+  text-align: center;
+  justify-content: center;
 }
 
 .btn-rounded {
@@ -59,6 +57,42 @@
   font-size: 16px;
 }
 
-hr.style1{
-	border-top: 1px solid #8c8b8b;
+hr.style1 {
+  border-top: 1px solid #8c8b8b;
+}
+
+@media (min-width: 1440px) {
+  .btn-rounded1 {
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #fefaf2;
+    width: 230px;
+  }
+  .btn-rounded2 {
+    float: right;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #fefaf2;
+    width: 300px;
+  }
+  .btn-rounded6 {
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #fefaf2;
+    width: 225px;
+    float: right;
+  }
+}
+
+@media (min-width: 600px) {
+  .btn-rounded1 {
+    margin-left: 1rem;
+  }
+  .btn-rounded6 {
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #fefaf2;
+    width: 225px;
+    float: right;
+  }
 }
