@@ -46,6 +46,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/pengajuan.css" />
     <link rel="stylesheet" href="css/view.css" />
+    <link rel="stylesheet" href="css/detail.css" />
     <!-- Script -->
     <script
       src="https://kit.fontawesome.com/90a0b526e4.js"
@@ -264,8 +265,13 @@
                         <td>Total(include PPN)Sekarang(CPM)</td>
                       </tr>
                     </thead>
+                    <!-- Item 1 -->
                     <tbody>
-                      <tr>
+                      <tr
+                        data-toggle="collapse"
+                        data-target="#demo1"
+                        class="accordion-toggle"
+                      >
                         <td><i class="fas fa-chevron-right"></i></td>
                         <td>VPN 1</td>
                         <td>26/7/2021</td>
@@ -277,6 +283,75 @@
                         <td>Rp. 198.000</td>
                       </tr>
                       <tr>
+                        <td colspan="9" class="hiddenRow">
+                          <div class="accordian-body collapse" id="demo1">
+                            <div class="col">
+                              <div class="card-7">
+                                <div class="card-body">
+                                  <dl class="row">
+                                    <p class="pad-6">Tanggal Dibutuhkan</p>
+                                    <p class="pad-6">: 26/7/2021</p>
+                                    <p class="pad-6">Kode Barang</p>
+                                    <p class="pad-6">: 00000926</p>
+                                    <p class="pad-6">PPN</p>
+                                    <p class="pad-6">: Ya</p>
+                                    <p class="pad-6">Kategori</p>
+                                    <p class="pad-6">: Otomatis</p>
+                                    <p class="pad-6">Nama Barang</p>
+                                    <p class="pad-6">: VPN</p>
+                                    <p class="pad-6">Biaya Lainnya</p>
+                                    <p class="pad-6">: Rp. 0</p>
+                                    <p class="pad-6">Group Dept</p>
+                                    <p class="pad-6">: IT</p>
+                                    <p class="pad-6">Harga Satuan</p>
+                                    <p class="pad-6">: Rp. 300.000</p>
+                                    <p class="pad-6">
+                                      Attachment Biaya Lainnya
+                                    </p>
+                                    <button
+                                      type="button"
+                                      class="btn btn-primary"
+                                      data-toggle="modal"
+                                      data-target=".bd-example-modal-lg"
+                                    >
+                                      Lihat
+                                    </button>
+                                    <div
+                                      class="modal fade bd-example-modal-lg"
+                                      tabindex="-1"
+                                      role="dialog"
+                                      aria-labelledby="myLargeModalLabel"
+                                      aria-hidden="true"
+                                    >
+                                      <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                          View Modal
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <p class="pad-6">Estimasi Kedatangan</p>
+                                    <p class="pad-6">: 26/8/2021</p>
+                                    <p class="pad-6">Qty</p>
+                                    <p class="pad-6">: 1</p>
+                                    <p class="pad-6">PPN Biaya Lainnya</p>
+                                    <p class="pad-6">: Tidak Ada</p>
+                                  </dl>
+                                </div>
+                                <!-- /.card-body -->
+                              </div>
+                              <!-- /.card -->
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <!-- Item 2 -->
+                    <tbody>
+                      <tr
+                        data-toggle="collapse"
+                        data-target="#demo2"
+                        class="accordion-toggle"
+                      >
                         <td><i class="fas fa-chevron-right"></i></td>
                         <td>ACER VERITON 5600G</td>
                         <td>26/7/2021</td>
@@ -286,6 +361,68 @@
                         <td>Ya</td>
                         <td>Rp. 198.000</td>
                         <td>Rp. 198.000</td>
+                      </tr>
+                      <tr>
+                        <td colspan="9" class="hiddenRow">
+                          <div class="accordian-body collapse" id="demo2">
+                            <div class="col">
+                              <div class="card-7">
+                                <div class="card-body">
+                                  <dl class="row">
+                                    <p class="pad-6">Tanggal Dibutuhkan</p>
+                                    <p class="pad-6">: 26/7/2021</p>
+                                    <p class="pad-6">Kode Barang</p>
+                                    <p class="pad-6">: 00000926</p>
+                                    <p class="pad-6">PPN</p>
+                                    <p class="pad-6">: Ya</p>
+                                    <p class="pad-6">Kategori</p>
+                                    <p class="pad-6">: Otomatis</p>
+                                    <p class="pad-6">Nama Barang</p>
+                                    <p class="pad-6">: VPN</p>
+                                    <p class="pad-6">Biaya Lainnya</p>
+                                    <p class="pad-6">: Rp. 0</p>
+                                    <p class="pad-6">Group Dept</p>
+                                    <p class="pad-6">: IT</p>
+                                    <p class="pad-6">Harga Satuan</p>
+                                    <p class="pad-6">: Rp. 300.000</p>
+                                    <p class="pad-6">
+                                      Attachment Biaya Lainnya
+                                    </p>
+                                    <button
+                                      type="button"
+                                      class="btn btn-primary"
+                                      data-toggle="modal"
+                                      data-target=".bd-example-modal-lg"
+                                    >
+                                      Lihat
+                                    </button>
+                                    <div
+                                      class="modal fade bd-example-modal-lg"
+                                      tabindex="-1"
+                                      role="dialog"
+                                      aria-labelledby="myLargeModalLabel"
+                                      aria-hidden="true"
+                                    >
+                                      <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                          View Modal
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <p class="pad-6">Estimasi Kedatangan</p>
+                                    <p class="pad-6">: 26/8/2021</p>
+                                    <p class="pad-6">Qty</p>
+                                    <p class="pad-6">: 1</p>
+                                    <p class="pad-6">PPN Biaya Lainnya</p>
+                                    <p class="pad-6">: Tidak Ada</p>
+                                  </dl>
+                                </div>
+                                <!-- /.card-body -->
+                              </div>
+                              <!-- /.card -->
+                            </div>
+                          </div>
+                        </td>
                       </tr>
                     </tbody>
                   </table>

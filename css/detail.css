@@ -1,0 +1,43 @@
+.pad-1 {
+  width: 25px;
+  max-width: 25px;
+}
+
+.pad-2 {
+  width: 50px;
+  max-width: 50px;
+}
+
+.pad-3 {
+  width: 100px;
+  max-width: 100px;
+}
+
+.pad-4 {
+  width: 150px;
+  max-width: 150px;
+}
+
+.pad-5 {
+  width: 200px;
+  max-width: 200px;
+}
+
+.pad-6 {
+  width: 246px;
+  max-width: 246px;
+}
+
+.pad-7 {
+  width: 300px;
+  max-width: 300px;
+}
+
+.card-7 {
+  background: #f6f6f6;
+  border: 1px solid #dee2e6;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 1510px;
+  max-width: 1510px;
+}
