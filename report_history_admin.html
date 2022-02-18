@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>PB PAR ONLINE</title>
-    <!-- Bootstrap 5 -->
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,6 +18,12 @@
     />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <!-- Ionicons -->
     <link
       rel="stylesheet"
@@ -46,10 +52,20 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"
+    />
     <!-- CSS -->
-    <link rel="stylesheet" href="css/dashboard.css" />
-    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/pengajuan.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/table.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/90a0b526e4.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -177,200 +193,899 @@
       </aside>
 
       <!-- Main content -->
+      <!-- Main Dashboard -->
       <div class="content-wrapper">
+        <!-- Main content -->
         <div class="container-fluid">
-          <h1 class="mt-3 ml-2">Pengaturan Delegasi Approval</h1>
-          <!-- Delegasi -->
-          <div class="col-lg-12">
-            <div class="card collapsed-card">
-              <div class="card-header">
-                <h3
-                  class="card-title ml-2"
-                  style="margin-top: 2px; font-weight: 600"
-                >
-                  Delegasi
-                </h3>
-                <div class="card-tools">
-                  <button
-                    type="button"
-                    class="btn btn-tool"
-                    data-card-widget="collapse"
-                  >
-                    <i class="fas fa-angle-down"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- Isi Card -->
-              <div class="card-body">
-                <!-- Form Pencarian -->
-                <div class="row">
-                  <div class="col-sm-10 ml-1">
-                    <div class="form-group has-search">
-                      <span class="fa fa-search form-control-feedback"></span>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Cari No. PAR Online, No. PB Online, No. PO ,No. PAR CPM, NIK/Nama Pemohon,dll"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-sm-1">
-                    <button class="btn btn-primary">Cari</button>
-                  </div>
-                </div>
-                <!-- Akhir Form Pencarian -->
-              </div>
+          <div class="row mb-2 ml-2">
+            <div class="col-sm-3">
+              <h1 class="mt-3">Pengajuan Baru</h1>
+            </div>
+            <div class="col">
+              <p
+                style="font-weight: 500; color: black"
+                class="nav-link btn-rounded2 mr-2 mt-4"
+              >
+                <bold style="font-weight: 700">Time: </bold>
+                Senin, 26/Jul/2021 <i class="fas fa-circle fa-xs"></i> 12:24:11
+                AM
+              </p>
             </div>
           </div>
-          <!-- Akhir Delegasi -->
-
-          <!-- Detail Informasi PB -->
-          <div class="col-md-12">
-            <div class="card collapsed-card">
-              <div class="card-header">
-                <h3
-                  class="card-title ml-2"
-                  style="margin-top: 2px; font-weight: 600"
+          <div class="col-sm-12">
+            <div class="card card-navy card-tabs">
+              <div class="card-header p-0 pt-1">
+                <ul
+                  class="nav nav-tabs"
+                  id="custom-tabs-one-tab"
+                  role="tablist"
                 >
-                  Detail Informasi PB
-                </h3>
-                <div class="card-tools">
-                  <button
-                    type="button"
-                    class="btn btn-tool"
-                    data-card-widget="collapse"
-                  >
-                    <i class="fas fa-angle-down"></i>
-                  </button>
-                </div>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="custom-tabs-one-par-tab"
+                      data-toggle="pill"
+                      href="#custom-tabs-one-par"
+                      role="tab"
+                      aria-controls="custom-tabs-one-par"
+                      aria-selected="true"
+                      >Pengajuan PB
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="custom-tabs-one-revisi-tab"
+                      data-toggle="pill"
+                      href="#custom-tabs-one-revisi"
+                      role="tab"
+                      aria-controls="custom-tabs-one-revisi"
+                      aria-selected="false"
+                      >Report PAR
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="custom-tabs-one-release-tab"
+                      data-toggle="pill"
+                      href="#custom-tabs-one-release"
+                      role="tab"
+                      aria-controls="custom-tabs-one-release"
+                      aria-selected="false"
+                      >Revisi PAR
+                      <span class="badge badge-danger right">5</span></a
+                    >
+                  </li>
+                </ul>
               </div>
               <div class="card-body">
-                <div class="col">
-                  <div style="background-color: #f0f7fd" class="card">
-                    <div class="card-body">
-                      <dl class="row">
-                        <dt class="col-sm-2">No Pengajuan</dt>
-                        <dd class="col-sm-4">: K/B/XZ01/2121/1</dd>
-                        <dt class="col-sm-2">Status Approval</dt>
-                        <dd class="col-sm-4">: Perlu Konfirmasi Approver 1</dd>
-                        <dt class="col-sm-2">No PAR</dt>
-                        <dd class="col-sm-4">
-                          : <span style="color: darkgrey">Belum Dibuat</span>
-                        </dd>
-                        <dt class="col-sm-2">Peran</dt>
-                        <dd class="col-sm-4">: Approver DBM</dd>
-                        <dt class="col-sm-2">No PO</dt>
-                        <dd class="col-sm-4">: Belum Dibuat</dd>
-                        <dt class="col-sm-2">Approver saat ini</dt>
-                        <dd class="col-sm-4">: Marvin McKinn</dd>
-                        <dt class="col-sm-2">Jenis Pengajuan</dt>
-                        <dd class="col-sm-4">: Penggantian</dd>
-                        <dt class="col-sm-2">Diwakilkan oleh</dt>
-                        <div class="col-sm-2">
-                          <select class="form-select" id="status">
-                            <option value="">Jonathan Iskandar</option>
-                            <option value="">a</option>
-                            <option value="">b</option>
-                          </select>
+                <div class="tab-content" id="custom-tabs-one-tabContent">
+                  <!-- Tab Pengajuan PB -->
+                  <div
+                    class="tab-pane fade show active"
+                    id="custom-tabs-one-par"
+                    role="tabpanel"
+                    aria-labelledby="custom-tabs-one-par-tab"
+                  >
+                    <div class="row mb-3">
+                      <div class="col-sm">
+                        <label for="tanggal">Range Tanggal :</label>
+                        <input
+                          type="date"
+                          name="tanggal"
+                          id="tanggal"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-sm">
+                        <label>Jenis Pengajuan</label>
+                        <select class="form-select" id="pengajuan">
+                          <option value="">Semua</option>
+                          <option value="">a</option>
+                          <option value="">b</option>
+                        </select>
+                      </div>
+                      <div class="col-sm">
+                        <label>Status</label>
+                        <select class="form-select" id="status">
+                          <option value="">Semua</option>
+                          <option value="">a</option>
+                          <option value="">b</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="search">Pencarian</label>
+                        <div class="input-group">
+                          <input
+                            placeholder="Cari No.PB,Judul Pengajuan NIK/Nama Pemohon, dll"
+                            class="form-control border-right-0 border"
+                            type="search"
+                            id="example-search-input"
+                          />
+                          <span class="input-group-append">
+                            <button
+                              class="btn border-left-0 border"
+                              type="button"
+                            >
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </span>
                         </div>
-                        <dd class="col-sm-2"></dd>
-                        <dt class="col-sm-2">Judul</dt>
-                        <dd class="col-sm-4">
-                          : Pemesanan Sewa Barang Baru Kendaraan Daihatsu Rocky
-                        </dd>
-                        <dt class="col-sm-2">Jabatan</dt>
-                        <dd class="col-sm-4">: Manager</dd>
-                        <dt class="col-sm-2">Pembuat</dt>
-                        <dd class="col-sm-4">: Widya Anchara</dd>
-                        <dt class="col-sm-2">Divisi</dt>
-                        <dd class="col-sm-4">: Prochurement</dd>
-                        <dt class="col-sm-2">Kode Jabatan</dt>
-                        <dd class="col-sm-4">: Manager</dd>
-                        <dt class="col-sm-2">Department</dt>
-                        <dd class="col-sm-4">
-                          : Prochurement System & Data Analyst
-                        </dd>
-                        <dt class="col-sm-2">Departement</dt>
-                        <dd class="col-sm-4">: HRD</dd>
-                        <dd class="col-sm-6"></dd>
-                        <dt class="col-sm-2">Cost Center</dt>
-                        <dd class="col-sm-4">
-                          : (P150) Procurement System & Data Analyst
-                        </dd>
-                      </dl>
+                      </div>
+                      <div class="col-sm" style="margin-top: 31px">
+                        <button class="btn btn-info">Cari</button>
+                      </div>
                     </div>
-                    <!-- /.card-body -->
+                    <table id="table" class="table-responsive-lg w-100 border">
+                      <thead>
+                        <tr>
+                          <td>#</td>
+                          <td>No PAR</td>
+                          <td>Tgl. Buat</td>
+                          <td>Judul Pengajuan</td>
+                          <td>Pemohon</td>
+                          <td>Status</td>
+                          <td>Detail</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>B-F18-103681</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Sudah menjadi PAR</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>B-F18-103682</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Perlu Konfirmasi Checker GS</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>B-F18-103683</td>
+                          <td>26/10/2021</td>
+                          <td>Pengajuan VPN INSTALLATION</td>
+                          <td>15083311 - Yayat Sudrajat</td>
+                          <td>Perlu Konfirmasi Checker GS</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>B-F18-103684</td>
+                          <td>26/10/2021</td>
+                          <td>Pengajuan VPN INSTALLATION</td>
+                          <td>15083311 - Yayat Sudrajat</td>
+                          <td>Perlu Konfirmasi Checker Khusus</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>B-F18-103685</td>
+                          <td>28/10/2021</td>
+                          <td>Pengajuan EPSON LQ 2180</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Perlu Konfirmasi Checker Khusus</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>B-F18-103686</td>
+                          <td>28/10/2021</td>
+                          <td>Pengajuan EPSON LQ 2180</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Perlu Konfirmasi Checker Pruchasing</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>B-F18-103687</td>
+                          <td>22/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Perlu Konfirmasi Checker Pruchasing</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>B-F18-103688</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Perlu Konfirmasi Requester</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>B-F18-103689</td>
+                          <td>30/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>B-F18-1036810</td>
+                          <td>30/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>11</td>
+                          <td>B-F18-103681</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Sudah menjadi PAR</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <!-- /.card -->
-                </div>
-                <!-- ./col -->
-              </div>
-            </div>
-          </div>
-          <!-- Akhir Detail Informasi PB -->
-
-          <!-- Awal Approval PB -->
-          <div class="col-md-12">
-            <div class="card collapsed-card">
-              <div class="card-header">
-                <h3
-                  class="card-title ml-2"
-                  style="margin-top: 2px; font-weight: 600"
-                >
-                  Approval PB
-                </h3>
-                <div class="card-tools">
-                  <button
-                    type="button"
-                    class="btn btn-tool"
-                    data-card-widget="collapse"
+                  <!-- Tab Report PAR -->
+                  <div
+                    class="tab-pane fade"
+                    id="custom-tabs-one-revisi"
+                    role="tabpanel"
+                    aria-labelledby="custom-tabs-one-revisi-tab"
                   >
-                    <i class="fas fa-angle-down"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body"></div>
-            </div>
-          </div>
-          <!-- Akhir Approval PB -->
+                    <div class="row mb-3">
+                      <div class="col-sm">
+                        <label for="tanggal">Range Tanggal :</label>
+                        <input
+                          type="date"
+                          name="tanggal"
+                          id="tanggal"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-sm">
+                        <label for="status">Pilihan Status</label>
+                        <select class="form-select" id="status">
+                          <option value="">Pilihan Status</option>
+                          <option value="">a</option>
+                          <option value="">b</option>
+                        </select>
+                      </div>
+                      <div class="col-sm">
+                        <label for="cabang">Cabang</label>
+                        <select class="form-select" id="cabang">
+                          <option value="">Pilih Jenis Pengajuan</option>
+                          <option value="">a</option>
+                          <option value="">b</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="search">Pencarian</label>
+                        <div class="input-group">
+                          <input
+                            placeholder="Cari No.PB,Judul Pengajuan NIK/Nama Pemohon, dll"
+                            class="form-control border-right-0 border"
+                            type="search"
+                            id="example-search-input"
+                          />
+                          <span class="input-group-append">
+                            <button
+                              class="btn border-left-0 border"
+                              type="button"
+                            >
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-sm-4" style="margin-top: 31px">
+                        <button class="btn btn-info">Cari</button>
+                      </div>
+                    </div>
+                    <!-- List History PAR -->
+                    <div class="row">
+                      <div class="col-sm-7">
+                        <h3>List History PAR</h3>
+                      </div>
+                      <div class="col-sm-4">
+                        <p
+                          style="
+                            text-align: center;
+                            font-weight: 500;
+                            background-color: #e1f0fd;
+                            border-radius: 20px;
+                          "
+                          class="border-0 responsive"
+                        >
+                          <span><i class="fas fa-info-circle ml-2"></i></span>
+                          Status Pengajuan :
+                          <span><i class="ml-3 fas fa-circle danger"></i></span>
+                          Batal
+                          <span
+                            ><i class="ml-3 fas fa-circle warning"></i
+                          ></span>
+                          Proses
+                          <span
+                            ><i class="ml-3 fas fa-circle success"></i
+                          ></span>
+                          Done
+                        </p>
+                      </div>
+                      <div class="col-sm-1">
+                        <i class="fas fa-download"></i>
+                      </div>
+                    </div>
+                    <table id="table" class="table-responsive-lg w-100 border">
+                      <thead>
+                        <tr>
+                          <td>#</td>
+                          <td>No PAR</td>
+                          <td>No. PO</td>
+                          <td>Judul Pengajuan</td>
+                          <td>Pemohon</td>
+                          <td>Tanggal Buat</td>
+                          <td>Total Harga Sebelum</td>
+                          <td>Total Harga Sekarang</td>
+                          <td>Supplier (Kurs)</td>
+                          <td>Status Approve</td>
+                          <td>Detail</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><i class="ml-3 fas fa-circle danger"></i></td>
+                          <td>0001/SAT-Z001/II-01</td>
+                          <td>1807/2GZ1/S/01</td>
+                          <td>Pengajuan VPN</td>
+                          <td>Imam Rosyad Setiaji</td>
+                          <td>21/10/2021</td>
+                          <td>Rp 286.000</td>
+                          <td>Rp 1.430.000</td>
+                          <td>B.000120 - RP</td>
+                          <td>Selesai</td>
+                          <td>
+                            <a href="" class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="ml-3 fas fa-circle danger"></i></td>
+                          <td>0001/SAT-Z001/II-02</td>
+                          <td>1807/2GZ1/S/01</td>
+                          <td>Pengajuan VPN</td>
+                          <td>Imam Rosyad Setiaji</td>
+                          <td>21/10/2021</td>
+                          <td>Rp 286.000</td>
+                          <td>Rp 1.430.000</td>
+                          <td>B.000120 - RP</td>
+                          <td>Selesai</td>
+                          <td>
+                            <a href="" class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="ml-3 fas fa-circle success"></i></td>
+                          <td>0001/SAT-Z001/II-03</td>
+                          <td>1807/2GZ1/S/01</td>
+                          <td>Pengajuan VPN</td>
+                          <td>Imam Rosyad Setiaji</td>
+                          <td>21/10/2021</td>
+                          <td>Rp 286.000</td>
+                          <td>Rp 1.430.000</td>
+                          <td>B.000120 - RP</td>
+                          <td>Selesai</td>
+                          <td>
+                            <a href="" class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="ml-3 fas fa-circle warning"></i></td>
+                          <td>0001/SAT-Z001/II-04</td>
+                          <td>1807/2GZ1/S/01</td>
+                          <td>Pengajuan VPN</td>
+                          <td>Imam Rosyad Setiaji</td>
+                          <td>21/10/2021</td>
+                          <td>Rp 286.000</td>
+                          <td>Rp 1.430.000</td>
+                          <td>B.000120 - RP</td>
+                          <td>Selesai</td>
+                          <td>
+                            <a href="" class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="ml-3 fas fa-circle warning"></i></td>
+                          <td>0001/SAT-Z001/II-05</td>
+                          <td>1807/2GZ1/S/01</td>
+                          <td>Pengajuan VPN</td>
+                          <td>Imam Rosyad Setiaji</td>
+                          <td>21/10/2021</td>
+                          <td>Rp 286.000</td>
+                          <td>Rp 1.430.000</td>
+                          <td>B.000120 - RP</td>
+                          <td>Selesai</td>
+                          <td>
+                            <a href="" class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="ml-3 fas fa-circle warning"></i></td>
+                          <td>0001/SAT-Z001/II-06</td>
+                          <td>1807/2GZ1/S/01</td>
+                          <td>Pengajuan VPN</td>
+                          <td>Imam Rosyad Setiaji</td>
+                          <td>21/10/2021</td>
+                          <td>Rp 286.000</td>
+                          <td>Rp 1.430.000</td>
+                          <td>B.000120 - RP</td>
+                          <td>Selesai</td>
+                          <td>
+                            <a href="" class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="ml-3 fas fa-circle success"></i></td>
+                          <td>0001/SAT-Z001/II-07</td>
+                          <td>1807/2GZ1/S/01</td>
+                          <td>Pengajuan VPN</td>
+                          <td>Imam Rosyad Setiaji</td>
+                          <td>21/10/2021</td>
+                          <td>Rp 286.000</td>
+                          <td>Rp 1.430.000</td>
+                          <td>B.000120 - RP</td>
+                          <td>Selesai</td>
+                          <td>
+                            <a href="" class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="ml-3 fas fa-circle success"></i></td>
+                          <td>0001/SAT-Z001/II-08</td>
+                          <td>1807/2GZ1/S/01</td>
+                          <td>Pengajuan VPN</td>
+                          <td>Imam Rosyad Setiaji</td>
+                          <td>21/10/2021</td>
+                          <td>Rp 286.000</td>
+                          <td>Rp 1.430.000</td>
+                          <td>B.000120 - RP</td>
+                          <td>Selesai</td>
+                          <td>
+                            <a href="" class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="ml-3 fas fa-circle danger"></i></td>
+                          <td>0001/SAT-Z001/II-09</td>
+                          <td>1807/2GZ1/S/01</td>
+                          <td>Pengajuan VPN</td>
+                          <td>Imam Rosyad Setiaji</td>
+                          <td>21/10/2021</td>
+                          <td>Rp 286.000</td>
+                          <td>Rp 1.430.000</td>
+                          <td>B.000120 - RP</td>
+                          <td>Selesai</td>
+                          <td>
+                            <a href="" class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="ml-3 fas fa-circle success"></i></td>
+                          <td>0001/SAT-Z001/II-10</td>
+                          <td>1807/2GZ1/S/01</td>
+                          <td>Pengajuan VPN</td>
+                          <td>Imam Rosyad Setiaji</td>
+                          <td>21/10/2021</td>
+                          <td>Rp 286.000</td>
+                          <td>Rp 1.430.000</td>
+                          <td>B.000120 - RP</td>
+                          <td>Selesai</td>
+                          <td>
+                            <a href="" class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="ml-3 fas fa-circle success"></i></td>
+                          <td>0001/SAT-Z001/II-11</td>
+                          <td>1807/2GZ1/S/01</td>
+                          <td>Pengajuan VPN</td>
+                          <td>Imam Rosyad Setiaji</td>
+                          <td>21/10/2021</td>
+                          <td>Rp 286.000</td>
+                          <td>Rp 1.430.000</td>
+                          <td>B.000120 - RP</td>
+                          <td>Selesai</td>
+                          <td>
+                            <a href="" class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="card">
+                      <div class="col-sm-12">
+                        <h3>Report PAR Online</h3>
+                        <p style="color: darkgray">21/10/2021 - 30/10/2021</p>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <!-- DONUT CHART -->
+                            <div class="card">
+                              <div class="card-body">
+                                <canvas
+                                  id="donutChart"
+                                  style="
+                                    min-height: 250px;
+                                    height: 250px;
+                                    max-height: 250px;
+                                    max-width: 100%;
+                                  "
+                                ></canvas>
+                              </div>
+                            </div>
+                          </div>
 
-          <!-- Approval PAR -->
-          <div class="col-md-12">
-            <div class="card collapsed-card">
-              <div class="card-header">
-                <h3
-                  class="card-title ml-2"
-                  style="margin-top: 2px; font-weight: 600"
-                >
-                  Approval PAR
-                </h3>
-                <div class="card-tools">
-                  <button
-                    type="button"
-                    class="btn btn-tool"
-                    data-card-widget="collapse"
+                          <div class="col-md-6">
+                            <!-- BAR CHART -->
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="chart">
+                                  <canvas
+                                    id="barChart"
+                                    style="
+                                      min-height: 250px;
+                                      height: 250px;
+                                      max-height: 250px;
+                                      max-width: 100%;
+                                    "
+                                  ></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <canvas id="areaChart"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Revisi PAR -->
+                  <div
+                    class="tab-pane fade"
+                    id="custom-tabs-one-release"
+                    role="tabpanel"
+                    aria-labelledby="custom-tabs-one-release-tab"
                   >
-                    <i class="fas fa-angle-down"></i>
-                  </button>
+                    <div class="row mb-3">
+                      <div class="col-sm">
+                        <label for="tanggal">Range Tanggal :</label>
+                        <input
+                          type="date"
+                          name="tanggal"
+                          id="tanggal"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-sm">
+                        <label for="status">Status</label>
+                        <select class="form-select" id="status">
+                          <option value="">Rev. CPM - Releaser</option>
+                          <option value="">a</option>
+                          <option value="">b</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="search">Pencarian</label>
+                        <div class="input-group">
+                          <input
+                            placeholder="Cari No.PB,Judul Pengajuan NIK/Nama Pemohon, dll"
+                            class="form-control border-right-0 border"
+                            type="search"
+                            id="example-search-input"
+                          />
+                          <span class="input-group-append">
+                            <button
+                              class="btn border-left-0 border"
+                              type="button"
+                            >
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-sm" style="margin-top: 31px">
+                        <button class="btn btn-info">Cari</button>
+                      </div>
+                    </div>
+                    <table id="table" class="table-responsive-lg w-100 border">
+                      <thead>
+                        <tr>
+                          <td>#</td>
+                          <td>No PB</td>
+                          <td>Tgl. Buat</td>
+                          <td>Judul Pengajuan</td>
+                          <td>Pemohon</td>
+                          <td>Jenis Pengajuan</td>
+                          <td>Status</td>
+                          <td>Detail</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>B-F18-103681</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>B-F18-103682</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>B-F18-103683</td>
+                          <td>26/10/2021</td>
+                          <td>Pengajuan VPN INSTALLATION</td>
+                          <td>15083311 - Yayat Sudrajat</td>
+                          <td>Penggantian</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>B-F18-103684</td>
+                          <td>26/10/2021</td>
+                          <td>Pengajuan VPN INSTALLATION</td>
+                          <td>15083311 - Yayat Sudrajat</td>
+                          <td>Penggantian</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>B-F18-103685</td>
+                          <td>28/10/2021</td>
+                          <td>Pengajuan EPSON LQ 2180</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>B-F18-103686</td>
+                          <td>28/10/2021</td>
+                          <td>Pengajuan EPSON LQ 2180</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Backup</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>B-F18-103687</td>
+                          <td>22/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>02030062- Ebron Ibrahim</td>
+                          <td>Backup</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>B-F18-103688</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>B-F18-103689</td>
+                          <td>30/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>B-F18-1036810</td>
+                          <td>30/10/2021</td>
+                          <td>Pengajuan ACER VERITON 5600G</td>
+                          <td>03031516 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>11</td>
+                          <td>B-F18-103681</td>
+                          <td>21/10/2021</td>
+                          <td>Pengajuan VPN</td>
+                          <td>05040151 - Imam Rosyad Setiaji</td>
+                          <td>Baru</td>
+                          <td>Diminta Revisi</td>
+                          <td>
+                            <a
+                              href="detail_par.html"
+                              class="btn btn-secondary disble"
+                              >Lihat</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
-              <div class="card-body"></div>
             </div>
           </div>
-          <!-- Akhir Approval PAR -->
-
-          <!-- Button Simpan & Batal -->
-          <div style="float: right" class="mb-3 mr-2">
-            <button type="submit" id="batal" class="btn btn-secondary mr-2">
-              Batal
-            </button>
-            <button type="submit" id="simpan" class="btn btn-success">
-              Simpan
-            </button>
-          </div>
-          <!-- Akhir Button Simpan & Batal -->
         </div>
       </div>
+
       <footer class="main-footer footer">
         <strong>Copyright 2020 All Rights Reserved</strong>
         <div class="float-right d-none d-sm-inline-block">
@@ -381,6 +1096,126 @@
       <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
+    <script>
+      $(document).ready(function () {
+        $("#table").DataTable();
+      });
+
+      $("table").dataTable({ searching: false });
+    </script>
+    <script>
+      $(function () {
+        var areaChartCanvas = $("#areaChart").get(0).getContext("2d");
+
+        var areaChartData = {
+          labels: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+          ],
+          datasets: [
+            {
+              label: "Digital Goods",
+              backgroundColor: "rgba(60,141,188,0.9)",
+              borderColor: "rgba(60,141,188,0.8)",
+              pointRadius: false,
+              pointColor: "#3b8bba",
+              pointStrokeColor: "rgba(60,141,188,1)",
+              pointHighlightFill: "#fff",
+              pointHighlightStroke: "rgba(60,141,188,1)",
+              data: [28, 48, 40, 19, 86, 27, 90],
+            },
+            {
+              label: "Electronics",
+              backgroundColor: "rgba(210, 214, 222, 1)",
+              borderColor: "rgba(210, 214, 222, 1)",
+              pointRadius: false,
+              pointColor: "rgba(210, 214, 222, 1)",
+              pointStrokeColor: "#c1c7d1",
+              pointHighlightFill: "#fff",
+              pointHighlightStroke: "rgba(220,220,220,1)",
+              data: [65, 59, 80, 81, 56, 55, 40],
+            },
+          ],
+        };
+
+        var areaChartOptions = {
+          maintainAspectRatio: false,
+          responsive: true,
+          legend: {
+            display: false,
+          },
+          scales: {
+            xAxes: [
+              {
+                gridLines: {
+                  display: false,
+                },
+              },
+            ],
+            yAxes: [
+              {
+                gridLines: {
+                  display: false,
+                },
+              },
+            ],
+          },
+        };
+
+        var donutChartCanvas = $("#donutChart").get(0).getContext("2d");
+        var donutData = {
+          labels: ["Total PAR", "PAR BATAL", "PAR PROSES", "PAR DONE"],
+          datasets: [
+            {
+              data: [700, 500, 400, 600],
+              backgroundColor: [
+                "#f56954",
+                "#00a65a",
+                "#f39c12",
+                "#00c0ef",
+                "#3c8dbc",
+                "#d2d6de",
+              ],
+            },
+          ],
+        };
+        var donutOptions = {
+          maintainAspectRatio: false,
+          responsive: true,
+        };
+
+        new Chart(donutChartCanvas, {
+          type: "doughnut",
+          data: donutData,
+          options: donutOptions,
+        });
+        // BAR Chart
+        var barChartCanvas = $('#barChart').get(0).getContext('2d')
+    var barChartData = $.extend(true, {}, areaChartData)
+    var temp0 = areaChartData.datasets[0]
+    var temp1 = areaChartData.datasets[1]
+    barChartData.datasets[0] = temp1
+    barChartData.datasets[1] = temp0
+
+    var barChartOptions = {
+      responsive              : true,
+      maintainAspectRatio     : false,
+      datasetFill             : false
+    }
+
+    new Chart(barChartCanvas, {
+      type: 'bar',
+      data: barChartData,
+      options: barChartOptions
+    })
+
+      });
+    </script>
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->

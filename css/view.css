@@ -3,6 +3,8 @@
   border: 1px solid #dee2e6;
   box-sizing: border-box;
   border-radius: 8px;
+  width: 250px;
+  max-width: 250px;
 }
 
 .card-2 {
@@ -10,12 +12,66 @@
   border: 1px solid #dee2e6;
   box-sizing: border-box;
   border-radius: 8px;
+  width: 250px;
+  max-width: 250px;
+}
+
+.card-3 {
+  background: #fee7e7;
+  border: 1px solid #dee2e6;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 525px;
+  max-width: 525px;
+}
+
+.card-4 {
+  background: #ebf9fe;
+  border: 1px solid #dee2e6;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 600px;
+}
+
+.card-5 {
+  background: #fff5d0;
+  border: 1px solid #dee2e6;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 250px;
+  max-width: 250px;
 }
 
 .card-status {
   width: 100px;
   background: #c45698;
   border-radius: 8px;
+}
+
+.margin-1 {
+  width: 20px;
+  max-width: 20px;
+}
+
+.margin-2 {
+  width: 50px;
+  max-width: 50px;
+}
+
+.margin-5 {
+  width: 70px;
+  max-width: 70px;
+}
+
+.margin-3 {
+  width: 100px;
+  max-width: 100px;
+}
+
+.margin-4 {
+  width: 150px;
+  max-width: 150px;
 }
 
 .ml-8 {

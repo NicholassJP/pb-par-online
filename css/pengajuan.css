@@ -1,3 +1,24 @@
+.danger {
+  color: red;
+}
+
+.warning {
+  color: yellow;
+}
+
+.success {
+  color: green;
+}
+
+.neutral {
+  color: #c45698;
+}
+
+.fixed1 {
+  width: 100px;
+  max-width: 100px;
+}
+
 .btn-rounded1 {
   align-items: center;
   justify-content: center;
@@ -59,6 +80,10 @@
 
 hr.style1 {
   border-top: 1px solid #8c8b8b;
+}
+
+.scrolling-wrapper {
+  overflow-x: auto;
 }
 
 @media (min-width: 1440px) {
