@@ -1,0 +1,20 @@
+.bold {
+  color: gray;
+  font-weight: 600;
+}
+
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
+
+@media (max-width: 520px) {
+  .footer-bottom p {
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

@@ -1,16 +1,15 @@
 footer {
+  box-shadow: 0px 0px 0px 1px rgba(159, 159, 159, 0.25);
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: #e1ecff;
   height: auto;
   width: 100vw;
   padding-top: 0px;
   color: #fff;
 }
 .footer-bottom {
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
   background: #fff;
   width: 100vw;
   padding: 20px;
@@ -22,7 +21,7 @@ footer {
   word-spacing: 2px;
 }
 .footer-bottom p a {
-  color: #44bae8;
+  color: #fff;
   font-size: 16px;
   text-decoration: none;
 }
@@ -40,8 +39,8 @@ footer {
 }
 
 .bold {
-  color: gray;
-  font-weight: 600;
+  color: rgb(88, 88, 88);
+  font-weight: bold;
 }
 
 @media (max-width: 520px) {
