@@ -3,6 +3,10 @@
   font-weight: 600;
 }
 
+.gray {
+  color: darkgrey;
+}
+
 .alignleft {
   float: left;
 }

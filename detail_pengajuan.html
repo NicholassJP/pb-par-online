@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="dist/css/adminlte.min.css" />
     <link rel="stylesheet" href="css/pengajuan.css" />
     <link rel="stylesheet" href="css/view.css" />
+    <link rel="stylesheet" href="css/detail.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Script -->
@@ -266,7 +267,7 @@
                           <dt class="col-sm-2">No. PAR</dt>
                           <dd class="col-sm-4">
                             :
-                            <span style="color: darkgrey"
+                            <span class="gray"
                               >Belum Digenerate</span
                             >
                           </dd>
@@ -275,7 +276,7 @@
                           <dt class="col-sm-2">No. PO</dt>
                           <dd class="col-sm-10">
                             :
-                            <span style="color: darkgrey"
+                            <span class="gray"
                               >Belum Digenerate</span
                             >
                           </dd>
@@ -346,32 +347,167 @@
                         <td>PAR Online</td>
                       </tr>
                     </thead>
+                    <!-- Item 1 -->
                     <tbody
                     >
-                      <tr>
+                    <tr
+                    data-toggle="collapse"
+                    data-target="#toggle-item1"
+                    class="accordion-toggle"
+                  >
                         <td><i class="fas fa-chevron-right"></i></td>
                         <td>VPN 1</td>
                         <td>1</td>
                         <td>26/7/2021</td>
-                        <td style="color: darkgray">Belum Diinput</td>
-                        <td style="color: darkgray">Belum Diinput</td>
-                        <td style="color: darkgray">Rp. 0</td>
-                        <td style="color: darkgray">Rp. 0</td>
-                        <td style="color: darkgray">Belum Diinput</td>
-                        <td style="color: darkgray">Belum Digenerate</td>
+                        <td class="gray">Belum Diinput</td>
+                        <td class="gray">Belum Diinput</td>
+                        <td class="gray">Rp. 0</td>
+                        <td class="gray">Rp. 0</td>
+                        <td class="gray">Belum Diinput</td>
+                        <td class="gray">Belum Digenerate</td>
                       </tr>
                     </tbody>
-                      <tr>
+                    <tr>
+                      <td colspan="10" class="hiddenRow">
+                        <div class="accordian-body collapse" id="toggle-item1">
+                          <div class="col">
+                            <div class="card-7">
+                              <div class="card-body">
+                                <dl class="row">
+                                  <p class="pad-6">Tanggal Dibutuhkan</p>
+                                  <p class="pad-6">: 26/7/2021</p>
+                                  <p class="pad-6">Kode Barang</p>
+                                  <p class="pad-6">: 00000926</p>
+                                  <p class="pad-6">PPN</p>
+                                  <p class="pad-6">: Ya</p>
+                                  <p class="pad-6">Kategori</p>
+                                  <p class="pad-6">: Otomatis</p>
+                                  <p class="pad-6">Nama Barang</p>
+                                  <p class="pad-6">: VPN</p>
+                                  <p class="pad-6">Biaya Lainnya</p>
+                                  <p class="pad-6">: Rp. 0</p>
+                                  <p class="pad-6">Group Dept</p>
+                                  <p class="pad-6">: IT</p>
+                                  <p class="pad-6">Harga Satuan</p>
+                                  <p class="pad-6">: Rp. 300.000</p>
+                                  <p class="pad-6">
+                                    Attachment Biaya Lainnya
+                                  </p>
+                                  <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    data-toggle="modal"
+                                    data-target=".bd-example-modal-lg"
+                                  >
+                                    Lihat
+                                  </button>
+                                  <div
+                                    class="modal fade bd-example-modal-lg"
+                                    tabindex="-1"
+                                    role="dialog"
+                                    aria-labelledby="myLargeModalLabel"
+                                    aria-hidden="true"
+                                  >
+                                    <div class="modal-dialog modal-lg">
+                                      <div class="modal-content">
+                                        View Modal
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <p class="pad-6">Estimasi Kedatangan</p>
+                                  <p class="pad-6">: 26/8/2021</p>
+                                  <p class="pad-6">Qty</p>
+                                  <p class="pad-6">: 1</p>
+                                  <p class="pad-6">PPN Biaya Lainnya</p>
+                                  <p class="pad-6">: Tidak Ada</p>
+                                </dl>
+                              </div>
+                              <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- Item 2 -->
+                    <tbody>
+                    <tr
+                    data-toggle="collapse"
+                    data-target="#toggle-item2"
+                    class="accordion-toggle"
+                  >
                         <td><i class="fas fa-chevron-right"></i></td>
                         <td>VPN 1</td>
                         <td>1</td>
                         <td>26/7/2021</td>
-                        <td style="color: darkgray">Belum Diinput</td>
-                        <td style="color: darkgray">Belum Diinput</td>
-                        <td style="color: darkgray">Rp. 0</td>
-                        <td style="color: darkgray">Rp. 0</td>
-                        <td style="color: darkgray">Belum Diinput</td>
-                        <td style="color: darkgray">Belum Digenerate</td>
+                        <td class="gray">Belum Diinput</td>
+                        <td class="gray">Belum Diinput</td>
+                        <td class="gray">Rp. 0</td>
+                        <td class="gray">Rp. 0</td>
+                        <td class="gray">Belum Diinput</td>
+                        <td class="gray">Belum Digenerate</td>
+                      </tr>
+                      <tr>
+                        <td colspan="10" class="hiddenRow">
+                          <div class="accordian-body collapse" id="toggle-item2">
+                            <div class="col">
+                              <div class="card-7">
+                                <div class="card-body">
+                                  <dl class="row">
+                                    <p class="pad-6">Tanggal Dibutuhkan</p>
+                                    <p class="pad-6">: 26/7/2021</p>
+                                    <p class="pad-6">Kode Barang</p>
+                                    <p class="pad-6">: 00000926</p>
+                                    <p class="pad-6">PPN</p>
+                                    <p class="pad-6">: Ya</p>
+                                    <p class="pad-6">Kategori</p>
+                                    <p class="pad-6">: Otomatis</p>
+                                    <p class="pad-6">Nama Barang</p>
+                                    <p class="pad-6">: VPN</p>
+                                    <p class="pad-6">Biaya Lainnya</p>
+                                    <p class="pad-6">: Rp. 0</p>
+                                    <p class="pad-6">Group Dept</p>
+                                    <p class="pad-6">: IT</p>
+                                    <p class="pad-6">Harga Satuan</p>
+                                    <p class="pad-6">: Rp. 300.000</p>
+                                    <p class="pad-6">
+                                      Attachment Biaya Lainnya
+                                    </p>
+                                    <button
+                                      type="button"
+                                      class="btn btn-primary"
+                                      data-toggle="modal"
+                                      data-target=".bd-example-modal-lg"
+                                    >
+                                      Lihat
+                                    </button>
+                                    <div
+                                      class="modal fade bd-example-modal-lg"
+                                      tabindex="-1"
+                                      role="dialog"
+                                      aria-labelledby="myLargeModalLabel"
+                                      aria-hidden="true"
+                                    >
+                                      <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                          View Modal
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <p class="pad-6">Estimasi Kedatangan</p>
+                                    <p class="pad-6">: 26/8/2021</p>
+                                    <p class="pad-6">Qty</p>
+                                    <p class="pad-6">: 1</p>
+                                    <p class="pad-6">PPN Biaya Lainnya</p>
+                                    <p class="pad-6">: Tidak Ada</p>
+                                  </dl>
+                                </div>
+                                <!-- /.card-body -->
+                              </div>
+                              <!-- /.card -->
+                            </div>
+                          </div>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
