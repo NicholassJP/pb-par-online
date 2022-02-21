@@ -17,7 +17,6 @@ footer {
   color: black;
 }
 .footer-bottom p {
-  float: left;
   font-size: 14px;
   word-spacing: 2px;
 }
@@ -31,14 +30,18 @@ footer {
   opacity: 0.4;
   font-weight: 200;
 }
-.footer-menu {
-  color: black;
+
+.alignleft {
+  float: left;
+}
+.alignright {
   float: right;
 }
 
 @media (max-width: 520px) {
-  .footer-menu {
-    float: none;
-    margin-bottom: 20px;
+  .footer-bottom p {
+    float: left;
+    width: 50%;
+    text-align: center;
   }
 }
